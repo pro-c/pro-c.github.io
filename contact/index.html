@@ -118,35 +118,25 @@
                     <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">Reach out if you have any questions!
 </p>
                     <div class="contact-form">
-                        <form id="contact-form" method="POST" action="https://formspree.io/support@pro-c.ca" role="form">
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                <input type="email" placeholder="Your Email" class="form-control" name="_replyto" id="email">
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                                <input type="text" placeholder="Subject" class="form-control" name="_subject" id="subject">
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                                <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
-                            </div>
-
-                            <div id="success" class="success">
-                                Thank you. The Mail is on His Way :)
-                            </div>
-
-                            <div id="error" class="error">
-                                Sorry, don't know what happened. Try later :(
-                            </div>
-
-                            <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
-                                <button type="submit" id="contact-submit" class="btn btn-default btn-send hvr-bounce-to-right" value="Send Message">Send Message</button>
-                            </div>
+                        <form id="contact-frm" name="contact-frm" accept-charset="utf-8" action="https://formspree.io/support@pro-c.ca" method="post">
+                            <fieldset id="fs-frm-inputs">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                                <label for="email-address">Email Address</label>
+                                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.xyz" required="">
+                                <label for="inquiry">Inquiry</label>
+                                <select name="inquiry" id="inquiry" required="">
+                                    <option value="Select" selected="" disabled="">Select</option>
+                                    <option value="Computer Repair">Computer Repair</option>
+                                    <option value="Data Recovery">Data Recovery</option>
+                                    <option value="Printers / Ink">Printers / Ink</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                                <label for="message">Message</label>
+                                <textarea rows="6" name="message" id="message" placeholder="Type your message here." required=""></textarea>
+                                <input type="hidden" name="_subject" id="email-subject" value="PRO-C Contact Form Submission">
+                            </fieldset>
+                            <input type="submit" value="Send Message" class="btn btn-default btn-send hvr-bounce-to-right">
                         </form>
                     </div>
                 </div>
