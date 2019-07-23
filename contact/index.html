@@ -121,10 +121,13 @@
                         <form id="contact-frm" name="contact-frm" accept-charset="utf-8" action="https://formspree.io/support@pro-c.ca" method="post">
                             <fieldset id="fs-frm-inputs">
                                 <label for="full-name">Full Name</label>
-                                <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                                <input type="text" class="form-control" name="name" id="full-name" placeholder="First and Last" required="">
+                                </br>
                                 <label for="email-address">Email Address</label>
-                                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.xyz" required="">
+                                <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="email@domain.xyz" required="">
+                                </br>
                                 <label for="inquiry">Inquiry</label>
+                                </br>
                                 <select name="inquiry" id="inquiry" required="">
                                     <option value="Select" selected="" disabled="">Select</option>
                                     <option value="Computer Repair">Computer Repair</option>
@@ -132,11 +135,15 @@
                                     <option value="Printers / Ink">Printers / Ink</option>
                                     <option value="General Inquiry">General Inquiry</option>
                                 </select>
-                                <label for="message">Message</label>
-                                <textarea rows="6" name="message" id="message" placeholder="Type your message here." required=""></textarea>
-                                <input type="hidden" name="_subject" id="email-subject" value="PRO-C Contact Form Submission">
+                                </br>
+                                </br>
+                                <textarea rows="5" name="message" id="message" placeholder="Type your message here." required=""></textarea>
+                                <input type="hidden" class="form-control" name="_subject" id="email-subject" value="PRO-C Contact Form Submission">
                             </fieldset>
-                            <input type="submit" value="Send Message" class="btn btn-default btn-send hvr-bounce-to-right">
+                            </br>
+                            <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="500ms">
+                                <input type="submit" value="Send Message" class="btn btn-default btn-send hvr-bounce-to-right">
+                            </div>
                         </form>
                     </div>
                 </div>
